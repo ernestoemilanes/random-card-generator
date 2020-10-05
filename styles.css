@@ -4,6 +4,13 @@ body {
     background-color: green;
 }
 
+.container-fluid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .card {
     background-color: white;
     height: 400px;
@@ -11,10 +18,24 @@ body {
     position: relative;
 }
 
-span .number {
+.number {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% -50%);
-    background-color: black;
+}
+
+.top-suit,
+.bottom-suit {
+    position: absolute;
+}
+
+.top-suit {
+    left: 10px;
+    top: 10px;
+}
+
+.bottom-suit {
+    right: 10px;
+    bottom: 10px;
 }

@@ -1,6 +1,8 @@
 window.onload = () => {
-    document.querySelector('.card').classList.add(generateRandomSuit());
-    document.querySelector('.card').innerHTML = generateRandomNumber();
+    let suit = generateRandomSuit();
+    document.querySelector('.number').innerHTML = generateRandomNumber();
+    document.querySelector('.top-suit').innerHTML = suit;
+    document.querySelector('.bottom-suit').innerHTML = suit;
 };
 
 
@@ -10,9 +12,11 @@ let generateRandomNumber = () => {
     let indexNumbers = Math.floor(Math.random() * numbers.length);
     return numbers[indexNumbers];
 };
+
+
 //! Changing Logo(suit) in Card
 let generateRandomSuit = () => {
-    let suit = ['diamond', 'spade', 'heart', 'club'];
+    let suit = ['&#9830;', '&#9824;', '&#9829;', '&#9827;'];
     let indexSuit = Math.floor(Math.random() * suit.length);
     return suit[indexSuit];
 };
