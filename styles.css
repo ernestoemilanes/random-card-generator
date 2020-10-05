@@ -20,9 +20,10 @@ body {
 
 .number {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 37%;
+    left: 43%;
     transform: translate(-50% -50%);
+    font-size: 100px;
 }
 
 .top-suit,
@@ -33,9 +34,11 @@ body {
 .top-suit {
     left: 10px;
     top: 10px;
+    font-size: 70px;
 }
 
 .bottom-suit {
     right: 10px;
     bottom: 10px;
+    font-size: 70px;
 }
