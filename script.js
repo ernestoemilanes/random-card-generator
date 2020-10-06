@@ -15,8 +15,19 @@ let generateRandomNumber = () => {
 
 
 //! Changing Logo(suit) in Card
-let generateRandomSuit = () => {
-    let suit = ['&#9830;', '&#9824;', '&#9829;', '&#9827;'];
+function generateRandomSuit() {
+
+    let heart = '&#9829;'
+    let diamond = '&#9830;'
+    let spades = '&#9824;'
+    let clubs = '&#9827;'
+
+    let suit = [diamond, spades, heart, clubs];
+
     let indexSuit = Math.floor(Math.random() * suit.length);
     return suit[indexSuit];
+
+    if (indexSuit == diamond || indexSuit == heart) {
+        document.getElementById("#suit-display").style.color = "red";
+    }
 };
