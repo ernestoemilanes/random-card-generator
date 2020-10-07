@@ -25,9 +25,15 @@ function generateRandomSuit() {
     let suit = [diamond, spades, heart, clubs];
 
     let indexSuit = Math.floor(Math.random() * suit.length);
-    return suit[indexSuit];
 
-    if (indexSuit == diamond || indexSuit == heart) {
-        document.getElementById("#suit-display").style.color = "red";
+
+    if (suit[indexSuit] == diamond || suit[indexSuit] == heart) {
+        // document.getElementsByClassName("suit-display").style.color = "red";
+        console.log(document.getElementsByClassName("suit-display"));
     }
+
+
+    console.log(indexSuit);
+    console.log(diamond);
+    return suit[indexSuit];
 };
