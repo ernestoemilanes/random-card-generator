@@ -1,5 +1,12 @@
 window.onload = () => {
     let suit = generateRandomSuit();
+    if (suit == '&#9830;' || suit == '&#9829;') {
+        document.querySelector(".top-suit").style.color = "red";
+        document.querySelector(".bottom-suit").style.color = "red";
+        document.querySelector(".number").style.color = "red";
+        // document.getElementbyClassName(‘suit - display’).forEach((element) => { //asign style.color = “red” to the element at this level }
+        console.log(document.getElementsByClassName("suit-display"));
+    }
     document.querySelector('.number').innerHTML = generateRandomNumber();
     document.querySelector('.top-suit').innerHTML = suit;
     document.querySelector('.bottom-suit').innerHTML = suit;
@@ -24,16 +31,13 @@ function generateRandomSuit() {
 
     let suit = [diamond, spades, heart, clubs];
 
-    let indexSuit = Math.floor(Math.random() * suit.length);
+    let indexSuit = suit[Math.floor(Math.random() * suit.length)];
 
 
-    if (suit[indexSuit] == diamond || suit[indexSuit] == heart) {
-        // document.getElementsByClassName("suit-display").style.color = "red";
-        console.log(document.getElementsByClassName("suit-display"));
-    }
+
 
 
     console.log(indexSuit);
     console.log(diamond);
-    return suit[indexSuit];
+    return indexSuit;
 };
